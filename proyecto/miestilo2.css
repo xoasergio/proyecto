@@ -1,0 +1,60 @@
+#tabla {
+	border-radius:15px;
+}
+#lunes {
+	border-radius:15px 0px 0px 0px;
+}
+#viernes {
+	border-radius:0px 15px 0px 0px;
+}
+#esqbizq {
+	border-radius:0px 0px 0px 15px;
+}
+#esqbdrcha {
+	border-radius:0px 0px 15px 0px;
+}
+#tabla {
+	background-color: white;
+}
+
+body{
+	text-align: center;
+	font-size: 12px;
+}
+table, tr, th{			
+	border: 4px solid black;
+	font-size: 14px;				
+}
+.dias{
+	color:red;	
+	background-color: lightGray;
+}
+.lengua{
+	background-color: gray;
+}
+.matematicas{
+	background-color: green;
+}
+.fisica{
+	background-color: lightBlue;
+}
+.quimica{
+	background-color: purple;
+}
+.tic{
+	background-color: pink;
+}
+.ingles{
+	background-color: blue;
+}
+.recreo{
+	background-color: white;
+	font-size: 10px;
+	text-align: center;
+}
+.historia{
+	background-color: orange;
+}
+.biologia{
+	background-color: red;
+}

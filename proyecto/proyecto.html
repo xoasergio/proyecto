@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>horario</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="miestilo.css">
+		<script src="javaScript.js"> </script>
+		
+	</head>
+	<body onload="cambiar()">
+
+		<h1 id= "id1">Mi horario</h1>
+
+		<table id=tabla>
+			<tr class=dias>
+				<th id=lunes>Lunes</th>
+				<th id=martes>Martes</th>
+				<th id=miercoles>Miércoles</th>
+				<th id=jueves>Jueves</th>
+				<th id=viernes>Viernes</th>
+			</tr>
+			<tr>
+				<th class="biologia">Biología</th>
+				<th class="quimica">Química</th>
+				<th class="biologia">Biología</th>
+				<th class="quimica">Química</th>
+				<th class="fisica">Física</th>
+			</tr>
+			<tr>
+				<th class="fisica">Física</th>
+				<th class="lengua">Lengua</th>
+				<th class="fisica">Física</th>
+				<th class="matematicas">Matemáticas</th>
+				<th class="biologia">Biología</th>
+			</tr>
+			<tr>
+				<th class="matematicas">Matemáticas</th>
+				<th class="biologia">Biología</th>
+				<th class="ingles">Inglés</th>
+				<th class="fisica">Física</th>
+				<th class="historia">Historia</th>
+			</tr>
+			<tr class=recreo>
+				<th colspan="5" >recreo</th>
+			</tr>
+			<tr>
+				<th class="quimica">Química</th>
+				<th class="historia">Historia</th>
+				<th class="tic">TIC</th>
+				<th class="tic">TIC</th>
+				<th class="matematicas">Matemáticas</th>
+			</tr>
+			<tr>
+				<th class="lengua">Lengua</th>
+				<th class="ingles">Inglés</th>
+				<th class="quimica">Química</th>
+				<th class="historia">Historia</th>
+				<th class="tic">TIC</th>
+			</tr>
+			<tr>
+				<th id=esqbizq class="historia">Historia</th>
+				<th class="matematicas">Matemáticas</th>
+				<th class="lengua">Lengua</th>
+				<th class="lengua">Lengua</th>
+				<th id=esqbdrcha class="ingles">Inglés</th>
+			</tr>
+		</table>
+		<p id="reloj"> </p>
+		<button onclick="f1()">f1</button>
+		<button onclick="f2()">f2</button>
+		<button onclick="f3()">f3</button>
+		<button onclick="f4()">f4</button>
+		
+		<button onclick="matematicas()">Matemáticas</button>			
+		<button onclick="lengua()">Lengua</button>
+		<button onclick="tic()">TIC</button>
+		<button onclick="historia()">Historia</button>
+		<button onclick="biologia()">Biología</button>
+		<button onclick="ingles()">Inglés</button>
+		<button onclick="quimica()">Química</button>
+		<button onclick="fisica()">Física</button>
+		
+		lengua:<input type="number" id="ml">
+		historia:<input type="number" id="mh">
+		matematicas:<input type="number" id="mm">
+		tic:<input type="number" id="mt">
+		ingles:<input type="number" id="mi" >
+		biologia:<input type="number" id="mb" >
+		fisica:<input type="number" id="mf" >
+		quimica:<input type="number" id="mq">
+		<input type= "button" onclick="media()"> Media </button>
+		Media: <span id="resultado"></span>
+	</body>
+</html>
