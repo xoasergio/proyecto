@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>horario</title>
+		<title>Proyecto</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="miestilo.css">
-		<script src="javaScript.js"> </script>
+		<link rel="stylesheet" type="text/css" href="miestilo2.css">
+		<script src="javaScript2.js"></script>
 		
 	</head>
 	<body onload="cambiar()">
@@ -20,11 +20,11 @@
 				<th id=viernes>Viernes</th>
 			</tr>
 			<tr>
-				<th class="biologia">Biología</th>
-				<th class="quimica">Química</th>
-				<th class="biologia">Biología</th>
-				<th class="quimica">Química</th>
-				<th class="fisica">Física</th>
+				<th class="biologia" onclick="desaparecer('t1')"> <span id="t1">Biología</span></th>
+				<th class="quimica" onclick="desaparecer('t2')"> <span id="t2">Química</span></th>
+				<th class="biologia" onclick="desaparecer('t3')"> <span id="t3">Biología</span></th>
+				<th class="quimica" onclick="desaparecer('t4')"> <span id="t4">Química</span></th>
+				<th class="fisica" onclick="desaparecer('t5')"> <span id="t5">Física</span></th>
 			</tr>
 			<tr>
 				<th class="fisica">Física</th>
@@ -66,10 +66,6 @@
 			</tr>
 		</table>
 		<p id="reloj"> </p>
-		<button onclick="f1()">f1</button>
-		<button onclick="f2()">f2</button>
-		<button onclick="f3()">f3</button>
-		<button onclick="f4()">f4</button>
 		
 		<button onclick="matematicas()">Matemáticas</button>			
 		<button onclick="lengua()">Lengua</button>

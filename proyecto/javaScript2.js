@@ -2,32 +2,6 @@ var hoy= new Date();
 var dia= hoy.getDay();
 var mes= hoy.getMonth()
 
-function f1() {
-	hoy =new Date();
-	s = hoy.getSeconds();
-	document.getElementsByTagName('th')[s].style.border="4px solid red";
-}
-
-function f2() {
-	document.getElementById('id1').style.color="orange";
-	document.getElementById('id1').style.fontStyle="italic";
-}
-
-function f3() {
-	for(var i=0;i<3;i++){
-	document.getElementsByClassName("fisica")[i].style.color="green";
-	document.getElementsByClassName("lengua")[i].style.color="blue";
-	document.getElementsByClassName("matematicas")[i].style.color="white";
-	}
-}
-
-function f4() {
-	for(var i=0; i<3;i++){
-	document.getElementsByClassName("fisica")[i].style.color="purple";
-	document.getElementsByClassName("lengua")[i].style.fontStyle="italic";
-	}
-}
-
 function cambiar()  {
 				if(mes==0) {
 					document.getElementById('tabla').style.backgroundColor= 'lightBlue';
@@ -127,16 +101,16 @@ function biologia() {
 }
 
 			var k= {
-				matematicas : 0,
-				lengua : 0,
-				fisica: 0,
-				biologia: 0,
-				ingles: 0,
-				tic: 0,
-				quimica: 0,
-				historia: 0,
+				matematicas : "",
+				lengua : "",
+				fisica: "",
+				biologia: "",
+				ingles: "",
+				tic: "",
+				quimica: "",
+				historia: "",
 				media: function md(){
-				var r=(k.quimica+k.matematicas+k.lengua+k.fisica+k.historia+k.ingles+k.biologia+k.tic)/8
+				var r=(parseInt(k.quimica)+parseInt(k.matematicas)+parseInt(k.lengua)+parseInt(k.fisica)+parseInt(k.historia)+parseInt(k.ingles)+parseInt(k.biologia)+parseInt(k.tic))/8
 				return r;
 				}
 				}
@@ -152,3 +126,18 @@ function biologia() {
 				k.quimica = document.getElementById("mq").value;
 				document.getElementById("resultado").innerHTML = k.media();
 				}
+
+
+function desaparecer(tarea)  {
+	var estado= document.getElementById(tarea);
+	if(estado.innerHTML === 'document.getElementById(tarea)') {
+				estado.innerHTML = "tarea";
+				estado.style.color = "black";
+	} 
+	
+	else {
+				estado.innerHTML = 'document.getElementById(tarea)';
+				estado.style.color = "black";	
+	}
+	}
+		
