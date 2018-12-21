@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head><!--Aqui se insertaran los enlaces a los archivos independientes, el tipo de codigo para que acepte todos los caracteres y el titulo de la pagina en la cabecera-->  
+		<title>Proyecto</title>
+		<meta charset="utf-8"> 
+		<link rel="stylesheet" type="text/css" href="miestilo2.css">
+		<script src="javaScript2.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+	</head>
+	<body onload="cambiar()"><!--Aqui se ejecutara la funcion "cambiar" al cargar la pagina y el body contendrá todos los componentes "fisicos" de la pagina-->
+
+		<h1 id= "id1">Mi horario</h1> <!--titulo que estara en la parte superior de la pagina con un tamaño diferente-->
+
+		<table id=tabla><!--tabla que formará el horario con el que vamos a trabajar-->
+			<tr class=dias><!-- cada "tr" corresponde a una fila de la tabla-->
+				<th id=lunes>Lunes</th><!-- cada "th" corresponde a una columna de esa fila-->
+				<th id=martes>Martes</th>
+				<th id=miercoles>Miércoles</th>
+				<th id=jueves>Jueves</th>
+				<th id=viernes>Viernes</th>
+			</tr>
+			<tr>
+				<th class="biologia" onclick="desaparecerbio('t1.1')"> <span id="t1.1">Biología</span></th><!--a partir de la segunda fila todas aquellas en las que se encuentren asignaturas, al hacer click en ellas, llamaran a la funcion correspondiente a dicha asignatura pero cada celda con una entrada propia-->
+				<th class="quimica" onclick="desaparecerqui('t2.1')"> <span id="t2.1">Química</span></th>
+				<th class="biologia" onclick="desaparecerbio('t1.2')"> <span id="t1.2">Biología</span></th>
+				<th class="quimica" onclick="desaparecerqui('t2.2')"> <span id="t2.2">Química</span></th>
+				<th class="fisica" onclick="desaparecerfis('t3.1')"> <span id="t3.1">Física</span></th>
+			</tr>
+			<tr>
+				<th class="fisica" onclick="desaparecerfis('t3.2')"><span id="t3.2">Física</span></th>
+				<th class="lengua" onclick="desaparecerlen('t4.1')"><span id="t4.1">Lengua</span></th>
+				<th class="fisica" onclick="desaparecerfis('t3.3')"><span id="t3.3">Física</span></th>
+				<th class="matematicas" onclick="desaparecermat('t5.1')"><span id="t5.1">Matemáticas</span></th>
+				<th class="biologia" onclick="desaparecerbio('t1.3')"><span id="t1.3">Biología</span></th>
+			</tr>
+			<tr>
+				<th class="matematicas" onclick="desaparecermat('t5.2')"><span id="t5.2">Matemáticas</span></th>
+				<th class="biologia" onclick="desaparecerbio('t1.4')"><span id="t1.4">Biología</span></th>
+				<th class="ingles" onclick="desaparecering('t6.1')"><span id="t6.1">Inglés</span></th>
+				<th class="fisica" onclick="desaparecerfis('t3.4')"><span id="t3.4">Física</span></th>
+				<th class="historia" onclick="desaparecerhis('t7.1')"><span id="t7.1">Historia</span></th>
+			</tr>
+			<tr class=recreo>
+				<th colspan="5" >recreo</th><!-- colspan se refiere a las columnas de ancho de esta fila-->
+			</tr>
+			<tr>
+				<th class="quimica" onclick="desaparecerqui('t2.3')"> <span id="t2.3">Química</span></th>
+				<th class="historia" onclick="desaparecerhis('t7.2')"><span id="t7.2">Historia</span></th>
+				<th class="tic" onclick="desaparecertic('t8.1')"><span id="t8.1">TIC</span></th>
+				<th class="tic" onclick="desaparecertic('t8.2')"><span id="t8.2">TIC</span></th>
+				<th class="matematicas" onclick="desaparecermat('t5.3')"><span id="t5.3">Matemáticas</span></th>
+			</tr>
+			<tr>
+				<th class="lengua" onclick="desaparecerlen('t4.2')"><span id="t4.2">Lengua</span></th>
+				<th class="ingles" onclick="desaparecering('t6.2')"><span id="t6.2">Inglés</span></th>
+				<th class="quimica" onclick="desaparecerqui('t2.4')"> <span id="t2.4">Química</span></th>
+				<th class="historia" onclick="desaparecerhis('t7.3')"><span id="t7.3">Historia</span></th>
+				<th class="tic" onclick="desaparecertic('t8.3')"><span id="t8.3">TIC</span></th>
+			</tr>
+			<tr>
+				<th id=esqbizq class="historia" onclick="desaparecerhis('t7.4')"><span id="t7.4">Historia</span></th>
+				<th class="matematicas" onclick="desaparecermat('t5.4')"><span id="t5.4">Matemáticas</span></th>
+				<th class="lengua" onclick="desaparecerlen('t4.3')"><span id="t4.3">Lengua</span></th>
+				<th class="lengua" onclick="desaparecerlen('t4.4')"><span id="t4.4">Lengua</span></th>
+				<th id=esqbdrcha class="ingles" onclick="desaparecering('t6.3')"><span id="t6.3">Inglés</span></th>
+			</tr>
+		</table>
+
+		<div id="acciones"><!-- se toma una division para poder elegir la posicion de la lista en la pagina-->
+			<li><button onclick="matematicas()">Matemáticas</button></li><!--se hace una lista de botones que al pulsarlos llamaran cada uno a su función-->
+			<li><button onclick="lengua()">Lengua</button></li>
+			<li><button onclick="tic()">TIC</button></li>
+			<li><button onclick="historia()">Historia</button></li>
+			<li><button onclick="biologia()">Biología</button></li>
+			<li><button onclick="ingles()">Inglés</button></li>
+			<li><button onclick="quimica()">Química</button></li>
+			<li><button onclick="fisica()">Física</button></li>
+		</div>
+		<div id=mds><!-- se toma una division para poder elegir la posicion de la lista en la pagina-->
+		lengua:<li><input type="number" id="ml"></li> <!--en este caso la lista es de imputs para permitir insertar informacion al programa con la que realizará la función-->
+		historia:<li><input type="number" id="mh"></li><!--los imputs son de tipo numerico ya que las notas solo pueden ser numeros-->
+		matematicas:<li><input type="number" id="mm"></li>
+		tic:<li><input type="number" id="mt"></li>
+		ingles:<li><input type="number" id="mi" ></li>
+		biologia:<li><input type="number" id="mb" ></li>
+		fisica:<li><input type="number" id="mf" ></li>
+		quimica:<li><input type="number" id="mq"></li>
+		<input type= "button" onclick="media()"> Media </button><!--el ultimo imput lleva un boton que realizará la media de todas las notas llamando a la función "media"-->
+		Media:<li> <span id="resultado"></span></li><!--este span mostrará el resultado de la función "media" contenido en la variable "resultado"-->
+		</div>
+		<button id="bb" onclick="borrar()">BORRAR PANTALLA AZUL</button>
+	</body>
+</html>

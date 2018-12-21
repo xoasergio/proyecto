@@ -1,0 +1,69 @@
+/*este archivo esta vinculado al archivo que contiene el html mediante un enlace y debera ir siempre en la misma carpeta que el archivo del html*/
+
+#tabla {/*se le dan al componente con ese identificador unico (id=) las propiedades posteriormente mencionadas*/
+	border-radius:15px;/* curvatura del borde en las esquinas, a mas pixeles mas curvatura*/
+}
+#lunes {
+	border-radius:15px 0px 0px 0px;/*cuando se pone la curvatura del radio cada con 4 cifras cada una se refiere a una esquina*/
+}
+#viernes {
+	border-radius:0px 15px 0px 0px;
+}
+#esqbizq {
+	border-radius:0px 0px 0px 15px;
+}
+#esqbdrcha {
+	border-radius:0px 0px 15px 0px;
+}
+#tabla {
+	background-color: white;
+	  float: center;
+}
+
+body{ /* asigna al tipo de elemento mencionado las caracteristicas posteriormente mencionadas*/
+	text-align: center;/*posicion del texto*/
+	font-size: 12px;/*tamaño de la letra*/
+}
+table, tr, th{			
+	border: 4px solid black;/* tamaño y color del borde de la tabla, columnas y filas*/
+	font-size: 14px;
+}
+.dias{ /*asigna a los elementos con ese identificador de clase (class=) las caracteristicas siguientes*/
+	color:red;	/*color de letra*/
+	background-color: lightGray;/*color de fondo*/
+}
+.lengua{
+	background-color: gray;
+}
+.matematicas{
+	background-color: green;
+}
+.fisica{
+	background-color: lightBlue;
+}
+.quimica{
+	background-color: purple;
+}
+.tic{
+	background-color: pink;
+}
+.ingles{
+	background-color: blue;
+}
+.recreo{
+	background-color: white;
+	font-size: 10px;
+	text-align: center;
+}
+.historia{
+	background-color: orange;
+}
+.biologia{
+	background-color: red;
+}
+#acciones{
+	float: left;/*posicion del div*/
+}
+#mds{
+	float: right;
+}
